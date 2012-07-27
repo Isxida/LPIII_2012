@@ -1,0 +1,247 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="PaginaMaestra.master.cs" Inherits="PaginaMaestra" %>
+
+<!DOCTYPE html>
+
+<html lang="es" itemscope itemtype="http://schema.org/LocalBusiness">
+<head runat="server">
+<meta itemprop="name" content="El Averno">
+<meta itemprop="description" content="Sala de Ensayos y Grabaciones 'EL AVERNO', 
+es una de las mejores y exclusivas salas a nivel nacional. 
+Contamos con el mejor equipo de sonido e instrumentos de calidad alta.">
+
+    <title>&nbsp.::: EL AVERNO - SALA DE ENSAYOS Y STUDIO DE GRABACIONES :::.&nbsp</title>
+
+<style type="text/css">
+    .socials {  
+        padding: 10px;  
+        }  
+        .style1
+        {
+            width: 541px;
+            height: 137px;
+        }
+        .style2
+        {
+            text-align: right;
+            color: #FF3300;
+            background-color: #000000;
+        }
+        .style3
+        {
+            font-size: large;
+        }
+        .style4
+        {
+            text-align: right;
+            color: #FFFFFF;
+            background-color: #000000;
+            font-size: large;
+        }
+        .style5
+        {
+            color: #666666;
+            background-color: #171717;
+        }
+        .style7
+        {
+            color: #666666;
+            background-color: #171717;
+            text-align: right;
+        }
+    </style>
+
+<link rel="Shortcut Icon" href="img/ico_music.gif" />
+<link rel="Stylesheet" type="text/css" href="Styles/bootstrap.css"/>
+
+
+<script language="JavaScript" type="text/javascript">
+    var txt = document.title;
+    var espera = 100;
+    var refresco = null;
+    function rotulo_title() {
+        document.title = txt;
+        txt = txt.substring(1, txt.length) + txt.charAt(0);
+        refresco = setTimeout("rotulo_title()", espera);
+    }
+    rotulo_title();
+</script>
+
+
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body background="img/bg_img.jpg">
+    <form id="form1" runat="server">
+
+<!-- Utilizando NAV BAR de Bootstrap -->
+<div class="navbar navbar-fixed-top" id="av_options">
+ <div class="navbar">
+  <div class="navbar-inner">
+    <div class="container">
+      <ul class="nav">
+        <li class="active">
+            <asp:HyperLink ID="hlPrincipalHome" runat="server" 
+                           NavigateUrl="~/Default.aspx" CssClass="brand">
+            El Averno
+            </asp:HyperLink>
+        </li>
+        <li>
+            <asp:HyperLink ID="hlHome" runat="server" NavigateUrl="~/Default.aspx">
+            Home
+            </asp:HyperLink>
+        </li>
+        <li>
+            <asp:HyperLink ID="hlSalas" runat="server" NavigateUrl="~/Salas.aspx">
+            Salas
+            </asp:HyperLink>
+        </li>
+        <li>
+            <asp:HyperLink ID="hlStudio" runat="server" NavigateUrl="~/Studio.aspx">
+            Studio
+            </asp:HyperLink>
+        </li>
+        <li>
+            <asp:HyperLink ID="hlEquipos" runat="server" NavigateUrl="~/Equipos.aspx">
+            Equipos
+            </asp:HyperLink>
+        </li>
+        
+        <li>
+            <asp:HyperLink ID="hlMasterizacion" runat="server" NavigateUrl="~/Masterizacion.aspx">
+            Masterización
+            </asp:HyperLink>
+        </li>
+        
+        <li>
+            <asp:HyperLink ID="hlClientes" runat="server" NavigateUrl="~/Clientes.aspx">
+            Clientes
+            </asp:HyperLink>
+        </li>
+        <li>
+            <asp:HyperLink ID="hlStaff" runat="server" NavigateUrl="~/Staff.aspx">
+            Staff
+            </asp:HyperLink>
+        </li>
+        <li>
+            <asp:HyperLink ID="hlTaller" runat="server" NavigateUrl="~/Taller.aspx">
+            Taller
+            </asp:HyperLink>
+        </li>
+        <li class="divider-vertical"></li>
+        <li>
+            <asp:HyperLink ID="hlContacto" runat="server" NavigateUrl="~/Contacto.aspx">
+            Contacto
+            </asp:HyperLink>
+        </li>
+        <li>
+            <asp:HyperLink ID="hlAcercaDe" runat="server" NavigateUrl="~/Acercade.aspx">
+            Acerca de
+            </asp:HyperLink>
+        </li>
+      </ul>
+      <ul class="nav pull-right">
+      </ul>
+    </div>
+  </div>
+</div>
+</div>
+
+<div align="center" style="padding-top:40px; padding-left:67px; width:90%"; id="av_header">
+    <table style="width: 100%;" bgcolor="Black">
+        <tr>
+            <td align="left" bgcolor="Black" rowspan="3" width="50%">
+                &nbsp;<img alt="logo_averno" class="style1" longdesc="el logo averno" 
+                    src="img/logo.jpg" /></td>
+            <td class="style2">
+                &nbsp;<strong><em><span class="style3">TELÉFONO:</span></em></strong><span 
+                    class="style3"> 426 98 55<br />
+                <strong><em>CELULAR:</em></strong> 987 654 321</span><br class="style3" />
+                <strong><em><span class="style3">E-MAIL:</span></em></strong>
+                <asp:HyperLink ID="HyperLink1" runat="server" 
+                    NavigateUrl="mailto:elaverno@music.com.pe">elaverno@music.com.pe</asp:HyperLink>
+            </td>
+        </tr>
+        <tr>
+            <td class="style2">
+            <g:plusone annotation="inline" size="medium" width=120 
+            href="http://www.cibertec.edu.pe/"></g:plusone>
+            </td>
+        </tr>
+        <tr>
+            <td class="style4">
+                Sala de Ensayos y Grabaciones &#39;EL AVERNO&#39;, es una de las mejores y exclusivas 
+                salas a nivel nacional. Contamos con el mejor equipo de sonido e instrumentos de 
+                alta calidad.</td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+                
+            </td>
+        </tr>
+        <tr>
+            <td class="style5" width="50%">
+                &nbsp;</td>
+            <td class="style7">
+                <asp:HyperLink ID="HyperLink2" runat="server" 
+                NavigateUrl="https://www.facebook.com/cibertecoficial" Target=_blank
+                ImageUrl="~/img/facebook_icon.png"></asp:HyperLink>
+                
+                <asp:HyperLink ID="HyperLink3" runat="server" ImageUrl="~/img/twitter_icon.png" 
+                NavigateUrl="https://twitter.com/comunidadciber" Target="_blank"></asp:HyperLink>
+                <!--
+                <img alt="fb_logo" class="style6" longdesc="logo fb" 
+                    src="img/facebook_icon.png" />
+                    <span class="label-inverse">&nbsp;&nbsp;&nbsp;</span>
+
+                <img alt="tw_logo" class="style6" longdesc="logo twitter" 
+                    src="img/twitter_icon.png" />
+                    <span class="label-inverse">&nbsp;&nbsp;&nbsp;</span> -->
+              </td> 
+        </tr>
+        <tr>
+            <td colspan="2">
+                
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+                    <p>
+                    </p>
+                </asp:ContentPlaceHolder>
+                
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" style="background-color: #171717">
+                &nbsp;</td>
+        </tr>
+    </table>
+</div>
+
+</form>
+</body>
+
+<script type="text/javascript">
+    window.___gcfg = { lang: 'es-419' };
+
+    (function () {
+        var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+        po.src = 'https://apis.google.com/js/plusone.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+    })();
+</script>
+
+<div id="fb-root"></div>
+<script type="text/javascript">    (function (d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/es_LA/all.js#xfbml=1";
+        fjs.parentNode.insertBefore(js, fjs);
+    } (document, 'script', 'facebook-jssdk'));</script>
+
+<script type="text/javascript" src="js/bootstrap.js"></script>
+<script type="text/javascript" src="js/jquery-1.7.2.js"></script>
+<script type="text/javascript" src="js/jslider.js"></script>
+
+</html>
