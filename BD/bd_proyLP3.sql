@@ -37,10 +37,35 @@ id_estado int references Estados(id_estado)
 
 insert Instrumentos values('G01','Guitarra Acustica',15/07/2012,31/12/2012,1);
 insert Instrumentos values('B01','Bajo Electrico',15/05/2012,31/12/2012,1);
-insert Instrumentos values('BA01','Bateria Slayer',15/04/2012,31/12/2012,1);
-insert Instrumentos values('G01','Guitarra Acustica',15/05/2012,31/12/2012,1);
-insert Instrumentos values('B01','Bajo w/ mini amplificador',15/05/2012,31/12/2012,1);
-insert Instrumentos values('BA01','Bateria Slayer w/ skull design',15/04/2012,31/12/2012,1);
+insert Instrumentos values('BA01','Bateria Mapex',15/04/2012,31/12/2012,1);
+insert Instrumentos values('G02','Guitarra Electrica Gibson',15/05/2012,31/12/2012,1);
+insert Instrumentos values('B02','Bajo w/ mini amplificador',15/05/2012,31/12/2012,1);
+insert Instrumentos values('BA02','Bateria DW w/ skull design',15/04/2012,31/12/2012,1);
+insert Instrumentos values('G03','Guitarra Gibson SG',15/05/2012,31/12/2012,1);
+insert Instrumentos values('B03','Bajo SCHECKTER diamond series',15/05/2012,31/12/2012,1);
+insert Instrumentos values('BA3','Bateria Tama',15/04/2012,31/12/2012,1);
+insert Instrumentos values('G04','Guitarra FLYING V ',15/05/2012,31/12/2012,1);
+insert Instrumentos values('B04','Bajo Warwick',15/05/2012,31/12/2012,1);
+insert Instrumentos values('BA4','Bateria Yamaha',15/04/2012,31/12/2012,1);
+insert Instrumentos values('G05','Guitarra GIBSON MODERNE',15/05/2012,31/12/2012,1);
+insert Instrumentos values('B05','Bajo Jackson',15/05/2012,31/12/2012,1);
+insert Instrumentos values('BA5','Bateria Zildjian',15/04/2012,31/12/2012,1);
+insert Instrumentos values('G06','Guitarra FENDER JAZZMASTER ',15/05/2012,31/12/2012,1);
+insert Instrumentos values('B06','Bajo D Addario',15/05/2012,31/12/2012,1);
+insert Instrumentos values('BA6','Bateria Pearl',15/04/2012,31/12/2012,1);
+insert Instrumentos values('G07','Guitarra FENDER SQUIER ',15/05/2012,31/12/2012,1);
+insert Instrumentos values('B07','Bajo Dunlop',15/05/2012,31/12/2012,1);
+insert Instrumentos values('BA7','Bateria Remo',15/04/2012,31/12/2012,1);
+insert Instrumentos values('G08','Guitarra IBANEZ',15/05/2012,31/12/2012,1);
+insert Instrumentos values('B08','Bajo Fernandes',15/05/2012,31/12/2012,1);
+insert Instrumentos values('BA8','Platillos Sabian',15/04/2012,31/12/2012,1);
+insert Instrumentos values('G09','Guitarra JACKSON',15/05/2012,31/12/2012,1);
+insert Instrumentos values('B09','Bajo Electrico Magma',15/05/2012,31/12/2012,1);
+insert Instrumentos values('BA9','Platillos Zildjian',15/04/2012,31/12/2012,1);
+insert Instrumentos values('G10','Guitarra FRNDER STRATOCASTER ',15/05/2012,31/12/2012,1);
+insert Instrumentos values('B10','Bajo Epiphone',15/05/2012,31/12/2012,1);
+insert Instrumentos values('BA10','Bateria Colombo w/ design',15/04/2012,31/12/2012,1);
+
 
 create table Usuarios(
 id_usuario int identity primary key,
