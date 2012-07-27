@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Service" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:5844/ProyectoService/Service.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:5844/ProyectoService/Service.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:5844/ProyectoService/Service.svc?xsd=xsd2" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IService_showUsuarios_InputMessage">
+    <wsdl:part name="parameters" element="tns:showUsuarios" />
+  </wsdl:message>
+  <wsdl:message name="IService_showUsuarios_OutputMessage">
+    <wsdl:part name="parameters" element="tns:showUsuariosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_findUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:findUsuario" />
+  </wsdl:message>
+  <wsdl:message name="IService_findUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:findUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_showInstrumentos_InputMessage">
+    <wsdl:part name="parameters" element="tns:showInstrumentos" />
+  </wsdl:message>
+  <wsdl:message name="IService_showInstrumentos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:showInstrumentosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_findInstrumento_InputMessage">
+    <wsdl:part name="parameters" element="tns:findInstrumento" />
+  </wsdl:message>
+  <wsdl:message name="IService_findInstrumento_OutputMessage">
+    <wsdl:part name="parameters" element="tns:findInstrumentoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_showStudios_InputMessage">
+    <wsdl:part name="parameters" element="tns:showStudios" />
+  </wsdl:message>
+  <wsdl:message name="IService_showStudios_OutputMessage">
+    <wsdl:part name="parameters" element="tns:showStudiosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_findStudio_InputMessage">
+    <wsdl:part name="parameters" element="tns:findStudio" />
+  </wsdl:message>
+  <wsdl:message name="IService_findStudio_OutputMessage">
+    <wsdl:part name="parameters" element="tns:findStudioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_showReservas_InputMessage">
+    <wsdl:part name="parameters" element="tns:showReservas" />
+  </wsdl:message>
+  <wsdl:message name="IService_showReservas_OutputMessage">
+    <wsdl:part name="parameters" element="tns:showReservasResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_findReserva_InputMessage">
+    <wsdl:part name="parameters" element="tns:findReserva" />
+  </wsdl:message>
+  <wsdl:message name="IService_findReserva_OutputMessage">
+    <wsdl:part name="parameters" element="tns:findReservaResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IService">
+    <wsdl:operation name="showUsuarios">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/showUsuarios" message="tns:IService_showUsuarios_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/showUsuariosResponse" message="tns:IService_showUsuarios_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="findUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/findUsuario" message="tns:IService_findUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/findUsuarioResponse" message="tns:IService_findUsuario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="showInstrumentos">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/showInstrumentos" message="tns:IService_showInstrumentos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/showInstrumentosResponse" message="tns:IService_showInstrumentos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="findInstrumento">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/findInstrumento" message="tns:IService_findInstrumento_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/findInstrumentoResponse" message="tns:IService_findInstrumento_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="showStudios">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/showStudios" message="tns:IService_showStudios_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/showStudiosResponse" message="tns:IService_showStudios_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="findStudio">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/findStudio" message="tns:IService_findStudio_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/findStudioResponse" message="tns:IService_findStudio_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="showReservas">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/showReservas" message="tns:IService_showReservas_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/showReservasResponse" message="tns:IService_showReservas_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="findReserva">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/findReserva" message="tns:IService_findReserva_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/findReservaResponse" message="tns:IService_findReserva_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IService" type="tns:IService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="showUsuarios">
+      <soap:operation soapAction="http://tempuri.org/IService/showUsuarios" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findUsuario">
+      <soap:operation soapAction="http://tempuri.org/IService/findUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="showInstrumentos">
+      <soap:operation soapAction="http://tempuri.org/IService/showInstrumentos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findInstrumento">
+      <soap:operation soapAction="http://tempuri.org/IService/findInstrumento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="showStudios">
+      <soap:operation soapAction="http://tempuri.org/IService/showStudios" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findStudio">
+      <soap:operation soapAction="http://tempuri.org/IService/findStudio" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="showReservas">
+      <soap:operation soapAction="http://tempuri.org/IService/showReservas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findReserva">
+      <soap:operation soapAction="http://tempuri.org/IService/findReserva" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service">
+    <wsdl:port name="BasicHttpBinding_IService" binding="tns:BasicHttpBinding_IService">
+      <soap:address location="http://localhost:5844/ProyectoService/Service.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
