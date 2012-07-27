@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="1dff1059-82ef-48bc-807b-a9915b50297d" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:1941/Isxida-LPIII_2012-Services-5ae43ff/Service.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Service.xsd" MetadataType="Schema" ID="10f2fa41-e6ff-4cbe-b50d-cd1ea66b51d5" SourceId="1" SourceUrl="http://localhost:1941/Isxida-LPIII_2012-Services-5ae43ff/Service.svc?xsd=xsd2" />
+    <MetadataFile FileName="Service1.xsd" MetadataType="Schema" ID="0475a69f-36aa-4e02-940e-2ab2d2353ead" SourceId="1" SourceUrl="http://localhost:1941/Isxida-LPIII_2012-Services-5ae43ff/Service.svc?xsd=xsd3" />
+    <MetadataFile FileName="Service2.xsd" MetadataType="Schema" ID="430b378d-b8d1-4cd9-8a6a-64898f7506c7" SourceId="1" SourceUrl="http://localhost:1941/Isxida-LPIII_2012-Services-5ae43ff/Service.svc?xsd=xsd0" />
+    <MetadataFile FileName="Service3.xsd" MetadataType="Schema" ID="72450dd7-7dcd-4147-bbfb-a6dd43181645" SourceId="1" SourceUrl="http://localhost:1941/Isxida-LPIII_2012-Services-5ae43ff/Service.svc?xsd=xsd1" />
+    <MetadataFile FileName="Service.wsdl" MetadataType="Wsdl" ID="27a77744-dd0e-46e3-af49-2bdc7210f1e1" SourceId="1" SourceUrl="http://localhost:1941/Isxida-LPIII_2012-Services-5ae43ff/Service.svc?wsdl" />
+    <MetadataFile FileName="Service.disco" MetadataType="Disco" ID="23d82f69-8f6c-4e82-8e9d-ee733689d35d" SourceId="1" SourceUrl="http://localhost:1941/Isxida-LPIII_2012-Services-5ae43ff/Service.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
