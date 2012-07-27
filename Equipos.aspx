@@ -26,7 +26,7 @@
             </td>
             <td bgcolor="#CCCCCC" width="25%">
                 <asp:Button ID="btnBuscar" runat="server" CssClass="btn-warning" 
-                    Text="Buscar" />
+                    onclick="btnBuscar_Click" Text="Buscar" />
             </td>
         </tr>
         <tr>
@@ -58,7 +58,7 @@
                     BorderColor="#3366CC" BorderWidth="1px" CellPadding="1" 
                     DayNameFormat="Shortest" Font-Names="Verdana" Font-Size="8pt" 
                     ForeColor="#003399" Height="200px" 
-                    onselectionchanged="Calendar2_SelectionChanged" Width="220px">
+                    Width="220px">
                     <DayHeaderStyle BackColor="#99CCCC" ForeColor="#336666" Height="1px" />
                     <NextPrevStyle Font-Size="8pt" ForeColor="#CCCCFF" />
                     <OtherMonthDayStyle ForeColor="#999999" />
@@ -94,6 +94,39 @@
             </td>
             <td bgcolor="#CCCCCC" width="25%">
                 &nbsp;</td>
+        </tr>
+        <tr>
+            <td bgcolor="#CCCCCC" width="25%">
+                &nbsp;</td>
+            <td bgcolor="#CCCCCC" width="25%">
+                &nbsp;</td>
+            <td bgcolor="#CCCCCC" width="25%">
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td bgcolor="#CCCCCC" colspan="3" style="width: 50%">
+                <asp:GridView ID="GridView1" runat="server" AllowPaging="True" 
+                    AllowSorting="True" AutoGenerateColumns="False" DataSourceID="SQL" 
+                    Height="237px" onselectedindexchanged="GridView1_SelectedIndexChanged" 
+                    Width="100%">
+                    <Columns>
+                        <asp:BoundField DataField="codigo" HeaderText="Codigo" 
+                            SortExpression="codigo" />
+                        <asp:BoundField DataField="descripcion" HeaderText="Descripcion" 
+                            SortExpression="descripcion" />
+                        <asp:BoundField DataField="feccompra" HeaderText="Fecha de Compra" 
+                            SortExpression="feccompra" />
+                        <asp:BoundField DataField="fecgarantia" HeaderText="Fecha de Garantia" 
+                            SortExpression="fecgarantia" />
+                        <asp:BoundField DataField="id_estado" HeaderText="Estado" 
+                            SortExpression="id_estado" />
+                    </Columns>
+                </asp:GridView>
+                <asp:SqlDataSource ID="SQL" runat="server" 
+                    ConnectionString="<%$ ConnectionStrings:BD_ProyLP3_cn %>" 
+                    SelectCommand="SELECT [codigo], [descripcion], [feccompra], [fecgarantia], [id_estado] FROM [Instrumentos]">
+                </asp:SqlDataSource>
+            </td>
         </tr>
         <tr>
             <td bgcolor="#CCCCCC" width="25%">

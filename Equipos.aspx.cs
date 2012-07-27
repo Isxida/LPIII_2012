@@ -18,8 +18,8 @@ public partial class Pages_Equipos : System.Web.UI.Page
     }
     protected void btnBuscar_Click(object sender, EventArgs e)
     {
-        DataSet ds = sr.findInstrumento(txtCodigo.Text);
-        GridView1.DataSource = ds;
+        
+        GridView1.DataSource = sr.findInstrumento(txtCodigo.Text);
         GridView1.DataBind();
     }
     protected void btnAgregar_Click(object sender, EventArgs e)
@@ -27,9 +27,9 @@ public partial class Pages_Equipos : System.Web.UI.Page
         try
         {
             cn.Open();
-            SqlCommand q = new SqlCommand("insert into Instrumentos values (@cod,@nom,@fecini,@fecgar,@est);", cn);
-            q.Parameters.Add("@cod", SqlDbType.VarChar).Value = txtCodigo;
-            q.Parameters.Add("@nom", SqlDbType.VarChar).Value = txtnom;
+            SqlCommand q = new SqlCommand("insert Instrumentos values (@cod,@nom,@fecini,@fecgar,@est)", cn);
+            q.Parameters.Add("@cod", SqlDbType.VarChar).Value = txtCodigo.Text;
+            q.Parameters.Add("@nom", SqlDbType.VarChar).Value = txtnom.Text;
             q.Parameters.Add("@fecini", SqlDbType.Date).Value = datetimer.SelectedDate;
             q.Parameters.Add("fecgar", SqlDbType.Date).Value = datetimer2.SelectedDate;
             q.Parameters.Add("@est", SqlDbType.Int).Value = cboestado.SelectedValue;
