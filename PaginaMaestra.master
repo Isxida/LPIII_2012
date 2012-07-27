@@ -2,24 +2,24 @@
 
 <!DOCTYPE html>
 
-<html lang="es" itemscope itemtype="http://schema.org/LocalBusiness">
+<html lang="es" itemtype="http://schema.org/LocalBusiness">
 <head runat="server">
 <meta itemprop="name" content="El Averno">
 <meta itemprop="description" content="Sala de Ensayos y Grabaciones 'EL AVERNO', 
 es una de las mejores y exclusivas salas a nivel nacional. 
 Contamos con el mejor equipo de sonido e instrumentos de calidad alta.">
 
-    <title>&nbsp EL AVERNO - SALA DE ENSAYOS Y STUDIO DE GRABACIONES &nbsp</title>
+    <title>&nbsp.::: EL AVERNO - SALA DE ENSAYOS Y STUDIO DE GRABACIONES :::.&nbsp</title>
+
+    <script src="Scripts/jquery-1.7.2.js" type="text/javascript"></script>
+    <script src="Scripts/bootstrap.js" type="text/javascript"></script>
+
+    <link href="Styles/bootstrap.css" rel="stylesheet" type="text/css" />
 
 <style type="text/css">
     .socials {  
         padding: 10px;  
         }  
-        .style1
-        {
-            width: 541px;
-            height: 137px;
-        }
         .style2
         {
             text-align: right;
@@ -41,18 +41,22 @@ Contamos con el mejor equipo de sonido e instrumentos de calidad alta.">
         {
             color: #666666;
             background-color: #171717;
-        }
+        text-align: right;
+    }
         .style7
         {
             color: #666666;
             background-color: #171717;
             text-align: right;
         }
+    .style8
+    {
+        font-size: large;
+        color: #FFFFFF;
+    }
     </style>
 
 <link rel="Shortcut Icon" href="img/ico_music.gif" />
-<link rel="Stylesheet" type="text/css" href="Styles/bootstrap.css"/>
-
 
 <script language="JavaScript" type="text/javascript">
     var txt = document.title;
@@ -82,30 +86,42 @@ Contamos con el mejor equipo de sonido e instrumentos de calidad alta.">
         <li class="active">
             <asp:HyperLink ID="hlPrincipalHome" runat="server" 
                            NavigateUrl="~/Default.aspx" CssClass="brand">
-            El Averno
+            AVERNO RECORDS
             </asp:HyperLink>
         </li>
         <li>
             <asp:HyperLink ID="hlHome" runat="server" NavigateUrl="~/Default.aspx">
-            Home
+            Inicio
             </asp:HyperLink>
         </li>
-        <li>
-            <asp:HyperLink ID="hlSalas" runat="server" NavigateUrl="~/Salas.aspx">
-            Salas
-            </asp:HyperLink>
+
+        <!-- RESERVAR -->
+        <li class="dropdown" id="listaReservas">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#listaReservas">
+                RESERVAR
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+                 <li>
+                    <asp:HyperLink ID="hlSalas" runat="server" NavigateUrl="~/Salas.aspx">
+                    Salas
+                    </asp:HyperLink>
+                </li>
+                <li>
+                    <asp:HyperLink ID="hlStudio" runat="server" NavigateUrl="~/Studio.aspx">
+                    Studio
+                    </asp:HyperLink>
+                </li>
+            </ul>
         </li>
-        <li>
-            <asp:HyperLink ID="hlStudio" runat="server" NavigateUrl="~/Studio.aspx">
-            Studio
-            </asp:HyperLink>
-        </li>
+        <!-- ===== -->
+
         <li>
             <asp:HyperLink ID="hlEquipos" runat="server" NavigateUrl="~/Equipos.aspx">
             Equipos
             </asp:HyperLink>
         </li>
-        
+       
         <li>
             <asp:HyperLink ID="hlMasterizacion" runat="server" NavigateUrl="~/Masterizacion.aspx">
             Masterización
@@ -138,6 +154,19 @@ Contamos con el mejor equipo de sonido e instrumentos de calidad alta.">
             Acerca de
             </asp:HyperLink>
         </li>
+        <li class="divider-vertical"></li>
+        <li>
+            <asp:HyperLink ID="hlLogin" runat="server" NavigateUrl="~/LoginUsuario.aspx">
+            Login
+            </asp:HyperLink>
+        </li>
+        <li class="divider-vertical"></li>
+        <li>
+            <asp:HyperLink ID="hlRegistroNuevo" runat="server" 
+                NavigateUrl="~/RegistroUsuario.aspx">
+            Regístrese
+            </asp:HyperLink>
+        </li>
       </ul>
       <ul class="nav pull-right">
       </ul>
@@ -149,28 +178,30 @@ Contamos con el mejor equipo de sonido e instrumentos de calidad alta.">
 <div align="center" style="padding-top:40px; padding-left:67px; width:90%"; id="av_header">
     <table style="width: 100%;" bgcolor="Black">
         <tr>
-            <td align="left" bgcolor="Black" rowspan="3" width="50%">
-                &nbsp;<img alt="logo_averno" class="style1" longdesc="el logo averno" 
-                    src="img/logo.jpg" /></td>
+            <td align="left" bgcolor="Black" rowspan="3" width="30%">
+                <asp:ImageButton ID="ImageButton1" runat="server" Height="118px" 
+                    ImageUrl="~/img/logo.jpg" PostBackUrl="~/Default.aspx" Width="402px" />
+            </td>
             <td class="style2">
                 &nbsp;<strong><em><span class="style3">TELÉFONO:</span></em></strong><span 
                     class="style3"> 426 98 55<br />
                 <strong><em>CELULAR:</em></strong> 987 654 321</span><br class="style3" />
                 <strong><em><span class="style3">E-MAIL:</span></em></strong>
-                <asp:HyperLink ID="HyperLink1" runat="server" 
+                <asp:HyperLink ID="hlMailto" runat="server" 
                     NavigateUrl="mailto:elaverno@music.com.pe">elaverno@music.com.pe</asp:HyperLink>
             </td>
         </tr>
         <tr>
             <td class="style2">
+                <asp:Label ID="lblUsuario" runat="server"></asp:Label>
             <g:plusone annotation="inline" size="medium" width=120 
             href="http://www.cibertec.edu.pe/"></g:plusone>
             </td>
         </tr>
         <tr>
-            <td class="style4">
-                Sala de Ensayos y Grabaciones &#39;EL AVERNO&#39;, es una de las mejores y exclusivas 
-                salas a nivel nacional. Contamos con el mejor equipo de sonido e instrumentos de 
+            <td class="style4" width="70%">
+                Contamos con las mejores y exclusivas 
+                salas a nivel nacional y con el mejor equipo de sonido e instrumentos de 
                 alta calidad.</td>
         </tr>
         <tr>
@@ -182,15 +213,23 @@ Contamos con el mejor equipo de sonido e instrumentos de calidad alta.">
             </td>
         </tr>
         <tr>
-            <td class="style5" width="50%">
-                &nbsp;</td>
+            <td class="style5" width="63%">
+                &nbsp;&nbsp;
+                <asp:HyperLink ID="hlReservaSala" runat="server" Font-Size="Large" 
+                    NavigateUrl="~/ReservarSala.aspx">RESERVAR</asp:HyperLink>
+&nbsp;<span class="style8">una sala de ensayos </span>&nbsp;<asp:HyperLink ID="hlReservaSala02" 
+                    runat="server" NavigateUrl="~/ReservarSala.aspx" Font-Size="Large">Aquí</asp:HyperLink>
+</td>
             <td class="style7">
                 <asp:HyperLink ID="HyperLink2" runat="server" 
                 NavigateUrl="https://www.facebook.com/cibertecoficial" Target=_blank
                 ImageUrl="~/img/facebook_icon.png"></asp:HyperLink>
                 
+                &nbsp;&nbsp;
+                
                 <asp:HyperLink ID="HyperLink3" runat="server" ImageUrl="~/img/twitter_icon.png" 
                 NavigateUrl="https://twitter.com/comunidadciber" Target="_blank"></asp:HyperLink>
+                &nbsp;&nbsp;&nbsp;
                 <!--
                 <img alt="fb_logo" class="style6" longdesc="logo fb" 
                     src="img/facebook_icon.png" />
@@ -213,7 +252,16 @@ Contamos con el mejor equipo de sonido e instrumentos de calidad alta.">
         </tr>
         <tr>
             <td colspan="2" style="background-color: #171717">
-                &nbsp;</td>
+            <marquee ONMOUSEOVER="this.stop();"
+                     ONMOUSEOUT="this.start();">
+                <span 
+                    style="color: rgb(255, 255, 255); font-family: Arial, Helvetica, sans-serif; font-size: 13px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 18px; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; background-color: rgb(23, 24, 26); display: inline !important; float: none; ">© 
+                2012,</span>
+                <asp:HyperLink ID="HyperLink5" runat="server" ForeColor="#FF3300" 
+                    NavigateUrl="~/Default.aspx">AVERNO RECORDS</asp:HyperLink>
+                &nbsp;<span class="style8">- Todos los derechos reservados</span>
+                </marquee>
+                </td>
         </tr>
     </table>
 </div>

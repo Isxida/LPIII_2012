@@ -9,7 +9,7 @@ using System.Data.SqlClient;
 using System.Data;
 public partial class Pages_Equipos : System.Web.UI.Page
 {
-    ServicioProyectoCliente.IService sr;
+    ServiceClient sr = new ServiceClient();
     SqlConnection cn = new SqlConnection("server=.;database=Comercial2012;uid=sa;pwd=sql");
     
     protected void Page_Load(object sender, EventArgs e)

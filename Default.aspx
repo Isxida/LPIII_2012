@@ -7,20 +7,36 @@
             width: 600px;
             height: 368px;
         }
-    </style>
+        </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
    
-    <table style="width:100%;">
-        <tr>
-            <td>
-           
-                <img alt="" src="img/mainimg01.jpg" width="100%" /></td>
-        </tr>
-    </table>
+            
+    
+    <div id="myCarousel" class="carousel slide" align="center">
+        <!-- Carousel items -->
+        <div class="carousel-inner">
+        <div class="active item">
+            <img src="img/mainimage01.jpg" alt="img01" />
+        </div>
+        <div class="item">
+            <img src="img/mainimage02.jpg" alt="img02" />
+        </div>
+        <div class="item">
+            <img src="img/mainimage03.jpg" alt="img03" />
+        </div>
+    </div>
+  <!-- Carousel nav -->
+  <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+  <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+</div>
+    
+
    
 </asp:Content>
+
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder2" Runat="Server">
+<p>
     <table style="width:100%;" bgcolor="#333333">
         <tr>
             <td colspan="3" 
@@ -65,6 +81,6 @@
                 &nbsp;</td>
         </tr>
     </table>
-
+</p>
 </asp:Content>
 
