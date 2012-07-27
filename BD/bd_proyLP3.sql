@@ -23,6 +23,9 @@ id_estado int identity primary key,
 descripcion varchar(45) not null
 )
 
+insert into Estados values ('Habilitado');
+insert into Estados values ('Deshabilitado');
+
 create table Instrumentos(
 id_instrumento int identity primary key,
 codigo varchar(9) not null,
@@ -31,6 +34,13 @@ feccompra datetime not null,
 fecgarantia datetime,
 id_estado int references Estados(id_estado)
 )
+
+insert Instrumentos values('G01','Guitarra Acustica',15/07/2012,31/12/2012,1);
+insert Instrumentos values('B01','Bajo Electrico',15/05/2012,31/12/2012,1);
+insert Instrumentos values('BA01','Bateria Slayer',15/04/2012,31/12/2012,1);
+insert Instrumentos values('G01','Guitarra Acustica',15/05/2012,31/12/2012,1);
+insert Instrumentos values('B01','Bajo w/ mini amplificador',15/05/2012,31/12/2012,1);
+insert Instrumentos values('BA01','Bateria Slayer w/ skull design',15/04/2012,31/12/2012,1);
 
 create table Usuarios(
 id_usuario int identity primary key,
@@ -44,6 +54,11 @@ fecnac datetime not null,
 direccion varchar(80)
 )
 
+insert into Usuarios values('ADM','ADM','72582819','Isxida','Romero',19,13/05/1993,null);
+insert into Usuarios values('U01','U03','72582819','Yvan','Lopez',23,10/02/1987,null);
+insert into Usuarios values('U02','U03','72582819','Abanto','Calvo',21,19/08/1991,null);
+insert into Usuarios values('U03','U03','72582819','Chicho','Darks',20,23/12/1992,null);
+
 create table Studios(
 id_studio int identity primary key,
 codigo varchar(9) not null,
@@ -52,6 +67,12 @@ capacidad int not null,
 descripcion varchar(90) not null,
 costo numeric(10,2)
 )
+
+insert into Studios values ('S01','Sala del eco acustico',5,'Sala del eco acustico. Ecoooooooooo?',150);
+insert into Studios values ('S02','Sala del rockero medieval',4,'Alguien dijo fiesta romana brutal w/ pogo?',250);
+insert into Studios values ('S03','Sala del rock melancolico ',5,'Para esas canciones indirectas a tu ex. y otras.',350);
+insert into Studios values ('S04','Sala del indie rock',6,'Porque el rock actual es muy mainstream.',500);
+insert into Studios values ('S05','Sala del averno',4,'Barato pero potente bro.',200);
 
 create table Reservas(
 id_reserva int identity primary key,
