@@ -1,12 +1,20 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/PaginaMaestra.master" AutoEventWireup="true" CodeFile="Studio.aspx.cs" Inherits="Pages_Studio" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+    <style type="text/css">
+    .style8
+    {
+        text-align: center;
+        font-size: x-large;
+        height: 42px;
+    }
+</style>
 </asp:Content>
 <asp:Content ID="Content2" runat="server" 
     contentplaceholderid="ContentPlaceHolder1">
     <table style="width:100%;" width="25%">
         <tr>
-            <td bgcolor="#CCCCCC" class="pagination-centered" colspan="3">
+            <td bgcolor="#CCCCCC" class="style8" colspan="3">
                 Mantenimiento de Studios</td>
         </tr>
         <tr>
@@ -16,7 +24,8 @@
                 <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
             </td>
             <td bgcolor="#CCCCCC" width="25%">
-                <asp:Button ID="btnBuscar" runat="server" Text="Buscar" />
+                <asp:Button ID="btnBuscar" runat="server" CssClass="btn-warning" 
+                    Text="Buscar" />
             </td>
         </tr>
         <tr>
@@ -32,7 +41,7 @@
             <td bgcolor="#CCCCCC" width="25%">
                 Capacidad</td>
             <td bgcolor="#CCCCCC" width="25%">
-                <asp:DropDownList ID="DropDownList1" runat="server">
+                <asp:DropDownList ID="DropDownList1" runat="server" Height="34px" Width="210px">
                     <asp:ListItem>1</asp:ListItem>
                     <asp:ListItem>2</asp:ListItem>
                     <asp:ListItem>3</asp:ListItem>
@@ -78,15 +87,15 @@
                 &nbsp;</td>
         </tr>
         <tr>
-            <td bgcolor="#CCCCCC" width="25%">
+            <td bgcolor="#CCCCCC" width="25%" style="text-align: center">
                 <asp:Button ID="btnAgregar" runat="server" Text="Agregar" 
                     CssClass="btn-success" />
             </td>
-            <td bgcolor="#CCCCCC" width="25%">
+            <td bgcolor="#CCCCCC" width="25%" style="text-align: center">
                 <asp:Button ID="btnActualizar" runat="server" Text="Actualizar" 
                     CssClass="btn-info" />
             </td>
-            <td bgcolor="#CCCCCC" width="25%">
+            <td bgcolor="#CCCCCC" width="25%" style="text-align: center">
                 <asp:Button ID="btnSalir" runat="server" Text="Salir" CssClass="btn-danger" />
             </td>
         </tr>
